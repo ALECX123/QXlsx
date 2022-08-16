@@ -26,7 +26,11 @@ public:
     inline void setColumn(int col) { _column = col; }
     inline int row() const { return _row; }
     inline int column() const { return _column; }
-
+    inline void operator =(const CellReference& other)
+    {
+        _row = other._row;
+        _column = other._column;
+    }
     inline bool operator ==(const CellReference &other) const
     {
         return _row==other._row && _column==other._column;
