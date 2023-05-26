@@ -100,6 +100,13 @@ Cell::CellType Cell::cellType() const
 	return d->cellType;
 }
 
+RichString Cell::GetCellRichString() const
+{
+	Q_D(const Cell);
+
+	return d->richString;
+}
+
 /*!
  * Return the data content of this Cell
  */

@@ -50,12 +50,14 @@ public:
     bool isEmtpy() const;
     QString toPlainString() const;
     QString toHtml() const;
+    QString toString() const;
     void setHtml(const QString &text);
 
     int fragmentCount() const;
     void addFragment(const QString &text, const Format &format);
     QString fragmentText(int index) const;
     Format fragmentFormat(int index) const;
+    
 
     operator QVariant() const;
 

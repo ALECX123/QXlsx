@@ -18,6 +18,7 @@
 
 QT_BEGIN_NAMESPACE_XLSX
 
+class RichString;
 class Worksheet;
 class Format;
 class CellFormula;
@@ -56,7 +57,7 @@ public:
 
 public:
     CellPrivate * const d_ptr; // See D-pointer and Q-pointer of Qt, for more information.
-
+    RichString GetCellRichString() const;
 public:
 	CellType cellType() const;
 	QVariant value() const;

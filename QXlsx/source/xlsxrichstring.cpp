@@ -146,6 +146,16 @@ QString RichString::toHtml() const
     return QString();
 }
 
+QString RichString::toString() const
+{
+    QString temp;
+    for (int i = 0; i < d->fragmentTexts.size(); i++)
+    {
+        temp.append(d->fragmentTexts.at(i));
+    }
+    return temp;
+}
+
 /*!
   Replaces the entire contents of the document
   with the given HTML-formatted text in the \a text string
